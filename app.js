@@ -114,7 +114,7 @@ const agregarProducto = document.querySelector(".carga-producto");
 
 const botonCancelar = document.querySelector(".icono-cancela-compra");
 
-const listaPlanes = document.querySelector(".planes-seccion-container"); //lista de todos los containers de planes
+const listaPlanes = document.querySelector(".planes-seccion-compra-container"); //lista de todos los containers de planes
 
 let productosTotales = []; // variable con array que incluye el total de productos que se agreguen al carrito
 
@@ -224,7 +224,7 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
         contarProductos.innerText = totalDePlanesAgregados;
 };    
 
-//-------------------------------------------------
+
 // Uso de modals
 const modales = document.querySelectorAll('.modal');
 const botonesCerrar = document.querySelectorAll('.modal button');
@@ -254,7 +254,6 @@ botonesCerrar.forEach(boton => {
     cerrarModal(modalId);
   });
 });
-
 
 // lo unico que pasa es que al cambiar de página el carrito se vacía automaticamente. Me fije como hacer pero creo que para eso ya hay que usar Back end, porque hay que almacenarlo en un storage con archivo json, etc. Asi que por ahora lo dejo asi.
 

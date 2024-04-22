@@ -123,12 +123,12 @@ a {
 
 /* Estilo lupa y busqueda */
 
-.navbar-search{
+.navbar-search {
     position: relative;
     padding: 5px;
 }
 
-.navbar-search input{
+.navbar-search input {
     width: 0px;
     height: 35px;
     padding: 0 10px;
@@ -140,14 +140,14 @@ a {
     border: none;
 }
 
-.boton-search-icon img{
+.boton-search-icon img {
     width: 30px;
     height: 30px;
     cursor: pointer;
     margin-left: 5px;
 }
 
-.search-icon a{
+.search-icon a {
     position: absolute;
     top: 5px;
     right: 0;
@@ -157,11 +157,11 @@ a {
     text-align: center;
 }
 
-.navbar-search:hover input{
+.navbar-search:hover input {
     width: 200px;
     background-color: #fff;
     border: 2px solid #4b20b1;
-    transition: all 0.8s ease; 
+    transition: all 0.8s ease;
 }
 
 /* Estilo carrito de compras */
@@ -192,7 +192,7 @@ a {
     border-radius: 50%;
 }
 
-#contador-productos{
+#contador-productos {
     font-size: 12px;
 }
 
@@ -204,11 +204,11 @@ a {
     width: 400px;
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-    border-radius: 10px;    
+    border-radius: 10px;
 }
 
 
-.carrito-producto{
+.carrito-producto {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -216,40 +216,40 @@ a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 }
 
-.info-carrito-producto{
+.info-carrito-producto {
     display: flex;
     justify-content: space-between;
     flex: 0.8;
 }
 
-.titulo-producto-carrito{
+.titulo-producto-carrito {
     font-size: 17px;
 }
 
-.precio-producto-carrito{
+.precio-producto-carrito {
     font-weight: 700;
     font-size: 16px;
     margin-left: 10px;
 }
 
-.cantidad-producto-carrito{
+.cantidad-producto-carrito {
     font-weight: 400;
     font-size: 16px;
 }
 
-.icono-cancela-compra{
+.icono-cancela-compra {
     width: 25px;
     height: 25px;
     background-color: transparent;
     border: none;
 }
 
-.icono-cancela-compra:hover{
+.icono-cancela-compra:hover {
     color: red;
     cursor: pointer;
 }
 
-.total-carrito{
+.total-carrito {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,17 +257,17 @@ a {
     gap: 20px;
 }
 
-.total-carrito h3{
-    font-size:18px;
+.total-carrito h3 {
+    font-size: 18px;
     font-weight: 700;
 }
 
-.total-pagar{
+.total-pagar {
     font-size: 20px;
     font-weight: 700;
 }
 
-.comprar-carrito{
+.comprar-carrito {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,18 +279,18 @@ a {
     padding: 8px;
     cursor: pointer;
     margin-right: -85px;
-}    
+}
 
 
-.hidden-cart{
-    display: none;
-} 
-
-.hidden{
+.hidden-cart {
     display: none;
 }
 
-.carrito-vacio{
+.hidden {
+    display: none;
+}
+
+.carrito-vacio {
     padding: 20px;
     text-align: center;
 }
@@ -635,41 +635,13 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     transition: all .5s;
 }
 
-.planes-seccion-item:hover {
-    box-shadow: 0 10px 20px rgba(34, 193, 140, 0.356);
-    background-color: #efd1f7;
+.planes-seccion-subtitulo {
+    font-size: 1.7em;
+    font-weight: 700;
+    color: var(--fourth-color);
+    text-align: center;
+    margin-bottom: 20px;
 }
-
-.planes-seccion-item img:hover {
-    transform: scale(1.1);
-}
-
-/*Falta terminar toda la parte de estilos, media query y JS de la parte de compra de planes, o sea una vez que apretamos "Saber mas" y nos lleva a otro lado, ahi en esa pagina falta todo eso*/
-
-/* .planes-seccion-item-compra{
-    border-radius: 20px;
-    margin: 30px;
-    width: 80%;
-    border-style:groove;
-}
-
-.planes-seccion-item-compra img{
-    padding: 30px;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 40px 40px 0 0;
-    transition: all .5s;
-}
-
-.planes-seccion-item-compra:hover{
-    box-shadow: 0 10px 20px rgba(34, 193, 140, 0.356);
-    background-color: #efd1f7;
-}
-
-.planes-seccion-item-compra img:hover{
-    transform: scale(1.1);
-} */
 
 .planes-seccion-info {
     padding: 15px 70px;
@@ -677,14 +649,6 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.planes-seccion-subtitulo {
-    font-size: 1.7em;
-    font-weight: 700;
-    color: var(--fourth-color);
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .plan-seccion-descripcion {
@@ -705,6 +669,107 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
 }
 
 .planes-seccion-info button:hover {
+    background-color: #ed1dc0;
+    transition: 1s;
+}
+
+.planes-seccion-item:hover {
+    box-shadow: 0 10px 20px rgba(34, 193, 140, 0.356);
+    background-color: #efd1f7;
+}
+
+.planes-seccion-item img:hover {
+    transform: scale(1.1);
+}
+
+/*Falta terminar toda la parte de estilos, media query y JS de la parte de compra de planes, o sea una vez que apretamos "Saber mas" y nos lleva a otro lado, ahi en esa pagina falta todo eso*/
+/* Estilos Compra Planes */
+
+.planes-seccion-compra-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 600px;
+    min-height: 500px;
+    padding: 20px;
+    margin-left: 400px;
+}
+
+.planes-seccion-compra-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    margin: 30px;
+    padding: 15px;
+    width: 100%; 
+    border-style: groove;
+}
+
+.planes-seccion-compra-info li{
+    list-style: none;
+    font-size: 1.1em;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+}
+
+.planes-seccion-compra-info ul li:before {
+    content: '✓';
+    color: var(--secondary-bis-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.planes-seccion-compra-info h2{
+    margin-bottom: 55px;
+    font-size: 40px;
+}
+
+.planes-seccion-compra-item img {
+    padding: 30px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 40px 40px 0 0;
+    transition: all .5s;
+}
+
+.planes-formato-pago{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px;
+}
+
+.planes-seccion-compra-info .precio{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.planes-seccion-compra-item:hover {
+    box-shadow: 0 10px 20px rgba(34, 193, 140, 0.356);
+    background-color: #efd1f7;
+}
+
+.planes-seccion-compra-item img:hover {
+    transform: scale(1.1);
+}
+
+.planes-seccion-compra-info button {
+    color: #fff;
+    background-color: var(--fifth-bis-color);
+    padding: 15px 10px;
+    margin: 30px 100px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.planes-seccion-compra-info button:hover {
     background-color: #ed1dc0;
     transition: 1s;
 }
@@ -737,6 +802,37 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
         max-width: 100%;
     }
 }
+
+@media only screen and (max-width:1020px) {
+    .planes-seccion-compra-container {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        top: 180px;
+        background-color: var(--bg-color);
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 170px;
+        margin-left: 200px;
+        box-shadow: 0 2px 10px rg(0, 0, 0, 1);
+        z-index: 1;
+    }
+
+    .planes-seccion-info button {
+        color: #fff;
+        background-color: var(--fifth-bis-color);
+        padding: 15px 10px;
+        margin: 30px 60px;
+        justify-content: center;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 200px;
+        max-width: 100%;
+    }
+}
+
+/* Falta chequear media query y responsividad, y hacer mas puntos de corte*/
 
 /* Estilos Testimonios slider */
 

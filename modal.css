@@ -12,20 +12,20 @@
     border: 1px solid #ccc; /* Borde */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
     z-index: 1000; /* Posicionamiento en el z-index */
-  }
+}
   
   /* Estilos para el modal activo */
-  .modal-activo {
+.modal-activo {
     display: block;
-  }
+}
   
   /* Estilos para el contenido del modal */
-  .modal-contenido {
+.modal-contenido {
     text-align: center; /* Alineación de texto */
-  }
+}
   
   /* Estilos para el botón de cerrar */
-  .modal button {
+.modal button {
     display: block;
     margin: 10px auto; /* Margen automático */
     padding: 10px 20px; /* Padding */
@@ -33,9 +33,9 @@
     color: white; /* Color de texto */
     border: none; /* Sin borde */
     cursor: pointer; /* Puntero del cursor */
-  }
+}
   
   /* Estilos para el botón de cerrar al enfocar */
-  .modal button:hover {
+.modal button:hover {
     background-color: rgb(155, 99, 149); /* Color de fondo verde más oscuro al enfocar */
-  }
+}
