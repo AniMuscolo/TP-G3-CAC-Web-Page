@@ -1,4 +1,4 @@
-/*Funcionalidad NavBar*/
+/* Funcionalidad NavBar */
 
 document.addEventListener("DOMContentLoaded", () => {
     //Seleccionamos elementos del DOM
@@ -115,6 +115,10 @@ const agregarProducto = document.querySelector(".carga-producto");
 const botonCancelar = document.querySelector(".icono-cancela-compra");
 
 const listaPlanes = document.querySelector(".planes-seccion-compra-container"); //lista de todos los containers de planes
+
+/* Prueba por error en modals */
+//const listaPlanes = document.querySelector(".compra-planes"); 
+// const listaPlanes = document.querySelector(".planes-seccion-container");
 
 let productosTotales = []; // variable con array que incluye el total de productos que se agreguen al carrito
 
@@ -256,8 +260,5 @@ botonesCerrar.forEach(boton => {
 });
 
 
-// lo unico que pasa es que al cambiar de página el carrito se vacía automaticamente. Me fije como hacer pero creo que para eso ya hay que usar Back end, porque hay que almacenarlo en un storage con archivo json, etc. Asi que por ahora lo dejo asi.
 
-// También faltaría que cuando se clickea en comprar carrito nos lleve a algun lado tipo: opciones de pago : tarjeta, pay pal, transferencia, etc, eso falta
 
-// hice el estilo de la lupa y buscador con css y hover pero no se si quieren darle funcionalidad, o sea que busque palabras dentro de nuestra página. Eso faltaría hacer

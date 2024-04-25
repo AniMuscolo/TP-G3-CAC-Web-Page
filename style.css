@@ -329,7 +329,7 @@ a {
     }
 
     50% {
-        transform: translate(0, 0) rotate(0eg);
+        transform: translate(0, 0) rotate(0deg);
     }
 
     75% {
@@ -362,7 +362,7 @@ a {
         right: 0;
         background-color: var(--secondary-color);
         width: 100%;
-        box-shadow: 0 2px 10px rg(0, 0, 0, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
         z-index: 1;
     }
 
@@ -452,9 +452,17 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     padding-left: 70px;
     font-style: italic;
     line-height: 3.4em;
+    white-space: pre-line;
 }
 
-/*falta terminar estilos de esta parte*/
+.qs-empezamos{
+    text-align: center;
+    font-size: 1.4em;
+    padding-left: 70px;
+    font-style: italic;
+    line-height:3.4em;
+    white-space: pre-line;
+}
 
 /*Estilo slide fotos*/
 
@@ -688,6 +696,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
 /* Estilos Compra Planes */
 
 .planes-seccion-compra-container {
+/* .compra-planes{ */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -695,7 +704,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     width: 80%;
     max-width: 600px;
     min-height: 500px;
-    padding: 20px;
+    padding: 10px;
     margin-left: 400px;
 }
 
@@ -717,6 +726,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     font-weight: 400;
     text-align: center;
     padding: 10px;
+    margin-bottom: 30px;
 }
 
 .planes-seccion-compra-info ul li:before {
@@ -789,7 +799,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
         width: 100%;
         max-width: 100%;
         margin-bottom: 170px;
-        box-shadow: 0 2px 10px rg(0, 0, 0, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
         z-index: 1;
     }
 
@@ -818,7 +828,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
         max-width: 100%;
         margin-bottom: 170px;
         margin-left: 200px;
-        box-shadow: 0 2px 10px rg(0, 0, 0, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
         z-index: 1;
     }
 
@@ -1116,9 +1126,3 @@ input {
     }
 }
 
-
-/*Falta hacer Media Query de la parte de los planes del index y de la parte de compra de los planes*/
-/*Falta ver la parte de Media Query casi todas las secciones, sobre todo la parte de planes y testimonios. 3 puntos de corte*/
-/* Falta darle utilidad a la lupita de busqueda, o sea que busque cosas, el estilo ya lo tiene */
-/*En la seccion compra habria que hacer un form para poner para que se elija por ej: pago con tarjeta, pago con transferencia, pago con Pay pal, etc*/
-/*Faltaria ver si quieren agregar algo en la parte de quienes somos, alguna imagen o algun fondo distinto, no se algo asi  y ver la responsividad */

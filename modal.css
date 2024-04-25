@@ -1,17 +1,17 @@
 /* Estilos básicos para los modales */
 .modal {
-    display: none; /* Oculta los modales por defecto */
-    position: fixed; /* Posicionamiento fijo */
-    top: 50%; /* Posiciona verticalmente en el centro */
-    left: 50%; /* Posiciona horizontalmente en el centro */
-    transform: translate(-50%, -50%); /* Ajusta la posición */
-    width: 80%; /* Ancho del modal */
-    max-width: 90%; /* Ancho máximo */
-    background-color: white; /* Color de fondo */
-    padding: 20px; /* Padding interno */
-    border: 1px solid #ccc; /* Borde */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    z-index: 1000; /* Posicionamiento en el z-index */
+  display: none; /* Oculta los modales por defecto */
+  position: fixed; /* Posicionamiento fijo */
+  top: 50%; /* Posiciona verticalmente en el centro */
+  left: 50%; /* Posiciona horizontalmente en el centro */
+  transform: translate(-50%, -50%); /* Ajusta la posición */
+  width: 80%; /* Ancho del modal */
+  max-width: 90%; /* Ancho máximo */
+  background-color: white; /* Color de fondo */
+  padding: 20px; /* Padding interno */
+  border: 1px solid #ccc; /* Borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  z-index: 1000; /* Posicionamiento en el z-index */
 }
 
 /* Texto importado del iframe */
@@ -24,23 +24,23 @@
   
   /* Estilos para el modal activo */
 .modal-activo {
-    display: block;
+  display: block;
 }
   
   /* Estilos para el contenido del modal */
 .modal-contenido {
-    text-align: center; /* Alineación de texto */
+  text-align: center; /* Alineación de texto */
 }
   
   /* Estilos para el botón de cerrar */
 .modal button {
-    display: block;
-    margin: 10px auto; /* Margen automático */
-    padding: 10px 20px; /* Padding */
-    background-color: rgb(155, 99, 149); /* Color de fondo verde */
-    color: white; /* Color de texto */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Puntero del cursor */
+  display: block;
+  margin: 10px auto; /* Margen automático */
+  padding: 10px 20px; /* Padding */
+  background-color: rgb(155, 99, 149); /* Color de fondo verde */
+  color: white; /* Color de texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Puntero del cursor */
 }
   
   /* Estilos para el botón de cerrar al enfocar */
