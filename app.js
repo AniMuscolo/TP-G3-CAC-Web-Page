@@ -1,4 +1,4 @@
-/*Funcionalidad NavBar*/
+/* Funcionalidad NavBar */
 
 document.addEventListener("DOMContentLoaded", () => {
     //Seleccionamos elementos del DOM
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     botonProximo.addEventListener("click", (event) => {   // para cambiar a testimonio siguiente
-        event.preventDefault();  
+        event.preventDefault();
         cambiarTestimonio(1);
     })
 
@@ -115,6 +115,10 @@ const agregarProducto = document.querySelector(".carga-producto");
 const botonCancelar = document.querySelector(".icono-cancela-compra");
 
 const listaPlanes = document.querySelector(".planes-seccion-compra-container"); //lista de todos los containers de planes
+
+/* Prueba por error en modals */
+//const listaPlanes = document.querySelector(".compra-planes"); 
+// const listaPlanes = document.querySelector(".planes-seccion-container");
 
 let productosTotales = []; // variable con array que incluye el total de productos que se agreguen al carrito
 
@@ -182,7 +186,7 @@ agregarProducto.addEventListener("click", event => {
 
 const mostrarCarrito = () => {    // para crear el carrito y que todos esos productos se vean dentro de él
 
-    if(!productosTotales.length){
+    if (!productosTotales.length) {
         carritoVacio.classList.remove("hidden");
         agregarProducto.classList.add("hidden");
         totalProductosCarrito.classList.add("hidden");
@@ -214,50 +218,47 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
         </svg>
         `; // insertamos la estructura HTML del contenido del carrito 
 
-            agregarProducto.append(contenedorProductos); //para ir añadiendo los productos al carrito
+        agregarProducto.append(contenedorProductos); //para ir añadiendo los productos al carrito
 
-            precioTotal = precioTotal + parseInt(plan.cantidad * plan.precio.slice(1)); //"Parseint" para convertirlo a entero, porque era un string y "slice" para sacar el simbolo "pesos". Multiplicamos el valor de cada plan por cada plan agregado asi nos da el total
-            totalDePlanesAgregados = totalDePlanesAgregados + plan.cantidad;
-        });
+        precioTotal = precioTotal + parseInt(plan.cantidad * plan.precio.slice(1)); //"Parseint" para convertirlo a entero, porque era un string y "slice" para sacar el simbolo "pesos". Multiplicamos el valor de cada plan por cada plan agregado asi nos da el total
+        totalDePlanesAgregados = totalDePlanesAgregados + plan.cantidad;
+    });
 
-        valorTotalCarrito.innerText = ` $${precioTotal} `;
-        contarProductos.innerText = totalDePlanesAgregados;
-};    
+    valorTotalCarrito.innerText = ` $${precioTotal} `;
+    contarProductos.innerText = totalDePlanesAgregados;
+};
 
-
+//-------------------------------------------------
 // Uso de modals
-const modales = document.querySelectorAll('.modal');
-const botonesCerrar = document.querySelectorAll('.modal button');
-const enlaces = document.querySelectorAll('a[data-modal]');
+const modales = document.querySelectorAll(".modal");
+const botonesCerrar = document.querySelectorAll(".cerrar-modal");
+const enlaces = document.querySelectorAll(".footer-items-link");
 
-function abrirModal(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.classList.add('modal-activo');
+function abrirModal(enlace) {
+    const modalClass = enlace.dataset.modalClass;
+    const modal = document.querySelector(`.modal.${modalClass}`);
+    modal.classList.add("modal-activo");
 }
 
-function cerrarModal(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.classList.remove('modal-activo');
+function cerrarModal(boton) {
+    const modalClass = boton.dataset.modalClass;
+    const modal = document.querySelector(`.modal.${modalClass}`);
+    modal.classList.remove("modal-activo");
 }
 
 enlaces.forEach(enlace => {
-  enlace.addEventListener('click', (e) => {
-    e.preventDefault();
-    const modalId = e.target.dataset.modal;
-    abrirModal(modalId);
-  });
+    enlace.addEventListener("click", (e) => {
+        e.preventDefault();
+        abrirModal(enlace);
+    });
 });
 
 botonesCerrar.forEach(boton => {
-  boton.addEventListener('click', () => {
-    const modalId = boton.parentNode.parentNode.id;
-    cerrarModal(modalId);
-  });
+    boton.addEventListener("click", () => {
+        cerrarModal(boton);
+    });
 });
 
-// lo unico que pasa es que al cambiar de página el carrito se vacía automaticamente. Me fije como hacer pero creo que para eso ya hay que usar Back end, porque hay que almacenarlo en un storage con archivo json, etc. Asi que por ahora lo dejo asi.
 
-// También faltaría que cuando se clickea en comprar carrito nos lleve a algun lado tipo: opciones de pago : tarjeta, pay pal, transferencia, etc, eso falta
 
-// hice el estilo de la lupa y buscador con css y hover pero no se si quieren darle funcionalidad, o sea que busque palabras dentro de nuestra página. Eso faltaría hacer
 

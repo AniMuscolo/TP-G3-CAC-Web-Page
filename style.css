@@ -329,7 +329,7 @@ a {
     }
 
     50% {
-        transform: translate(0, 0) rotate(0eg);
+        transform: translate(0, 0) rotate(0deg);
     }
 
     75% {
@@ -362,7 +362,7 @@ a {
         right: 0;
         background-color: var(--secondary-color);
         width: 100%;
-        box-shadow: 0 2px 10px rg(0, 0, 0, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
         z-index: 1;
     }
 
@@ -452,9 +452,17 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     padding-left: 70px;
     font-style: italic;
     line-height: 3.4em;
+    white-space: pre-line;
 }
 
-/*falta terminar estilos de esta parte*/
+.qs-empezamos{
+    text-align: center;
+    font-size: 1.4em;
+    padding-left: 70px;
+    font-style: italic;
+    line-height:3.4em;
+    white-space: pre-line;
+}
 
 /*Estilo slide fotos*/
 
@@ -666,6 +674,8 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     border-radius: 15px;
     cursor: pointer;
     width: 200px;
+    font-size: 17px;
+    font-weight: 500;
 }
 
 .planes-seccion-info button:hover {
@@ -682,10 +692,11 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     transform: scale(1.1);
 }
 
-/*Falta terminar toda la parte de estilos, media query y JS de la parte de compra de planes, o sea una vez que apretamos "Saber mas" y nos lleva a otro lado, ahi en esa pagina falta todo eso*/
+/*Falta terminar toda la parte media query de la parte de compra de planes */
 /* Estilos Compra Planes */
 
 .planes-seccion-compra-container {
+/* .compra-planes{ */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -693,7 +704,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     width: 80%;
     max-width: 600px;
     min-height: 500px;
-    padding: 20px;
+    padding: 10px;
     margin-left: 400px;
 }
 
@@ -715,6 +726,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     font-weight: 400;
     text-align: center;
     padding: 10px;
+    margin-bottom: 30px;
 }
 
 .planes-seccion-compra-info ul li:before {
@@ -767,6 +779,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
     border-radius: 15px;
     cursor: pointer;
     width: 200px;
+    font-size: 18px;
 }
 
 .planes-seccion-compra-info button:hover {
@@ -786,7 +799,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
         width: 100%;
         max-width: 100%;
         margin-bottom: 170px;
-        box-shadow: 0 2px 10px rg(0, 0, 0, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
         z-index: 1;
     }
 
@@ -815,7 +828,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
         max-width: 100%;
         margin-bottom: 170px;
         margin-left: 200px;
-        box-shadow: 0 2px 10px rg(0, 0, 0, 1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.01);
         z-index: 1;
     }
 
@@ -1113,12 +1126,3 @@ input {
     }
 }
 
-
-/*Falta hacer el CSS, JS y Media Query de la parte de la compra de los planes*/
-/*Falta ver la parte de Media Query casi todas las secciones, sobre todo la parte de planes y testimonios*/
-/* Falta darle utilidad a la lupita de busqueda, o sea que busque cosas, el estilo ya lo tiene */
-/* Falta agregar las rutas y anclas de cada boton */
-/*En la seccion compra habria que hacer un form para poner para que se elija por ej: pago con tarjeta, pago con transferencia, pago con Pay pal, etc*/
-/*Faltaria ver si quieren agregar algo en la parte de quienes somos, alguna imagen o algun fondo distinto, no se algo asi  y ver la responsividad */
-
-/*Faltaría ver si quieren agregar alguna otra seccion que se les ocurra o si quieren cambiar algo de lo que está */

@@ -1,0 +1,19 @@
+*{
+    font-family: "Open Sans", sans-serif;
+    border: none;
+}
+
+p{
+    line-height: 20px;
+}
+
+.parrafo-centrado{
+    text-align: center;
+    align-items: center;
+    margin: 50px;    
+}
+
+.centrar {
+    text-align: center;
+    align-items: center;
+}
