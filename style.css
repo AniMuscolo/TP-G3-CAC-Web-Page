@@ -693,6 +693,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
 }
 
 /*Falta terminar toda la parte media query de la parte de compra de planes */
+
 /* Estilos Compra Planes */
 
 .planes-seccion-compra-container {
@@ -751,7 +752,7 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
 }
 
 .planes-formato-pago{
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 600;
     text-align: center;
     margin: 50px;
@@ -769,6 +770,39 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
 
 .planes-seccion-compra-item img:hover {
     transform: scale(1.1);
+}
+
+.contenedor-formulario{
+    width: 50%;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.seleccion-formulario{
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    text-align:initial;
+    transition: .2s ease all;
+    margin-bottom: 25px;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.seleccion-formulario:hover{
+    border: 2px solid var(--fourth-color);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
+}
+
+.estilo-opcion{
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .planes-seccion-compra-info button {
@@ -846,6 +880,60 @@ trate de ver desde el celu y me parecio q a partir de ese tamaño se empieza a r
 }
 
 /* Falta chequear media query y responsividad, y hacer mas puntos de corte*/
+
+
+/* Estilos Seccion Video */
+.video-seccion {
+    max-width: 1440px;
+    margin-right: 120px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    width: 100%;
+}
+
+.video-seccion-contenedor{
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding: 0 40px;
+    width: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    position: relative;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.video-seccion-descripcion{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 20px;
+    margin-top: 70px;
+    color: var(--fourth-color);
+}
+
+.video-seccion-descripcion h2{
+    text-align: center;
+    font-size: 1.7em;
+    margin-bottom: 40px;
+}
+
+.video-seccion-descripcion p{
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 35px;
+}
+
 
 /* Estilos Testimonios slider */
 
