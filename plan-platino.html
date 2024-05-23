@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/logo4-pag.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo4-pag.png" type="image/x-icon">
     <!-- Estilos -->
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/modal.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,71 +27,70 @@
             <nav class="navbar contenedor">
                 <!-- logo -->
                 <a href="index.html" class="navbar-logo">
-                    <img src="/images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="300"></a>
-                    <!-- Hipervinculos para el menu -->
-                    <div class="navbar-links">
-                        <ul class="navbar-list">
-                            <li class="nav-item"><a href="index.html">Inicio</a></li>
-                            <li class="nav-item"><a href="#quienes-somos"> Quienes somos</a></li>
-                            <li class="nav-item"><a href="#">Planes online</a></li>
-                            <li class="nav-item"><a href="#contacto">Contacto</a></li>
-                        </ul>
-                        <!-- Buscador -->
-                        <div class="navbar-search">
-                            <input type="text" placeholder="Buscar" required>
-                            <div class="search-icon">
-                                <a href="#" class="boton-search-icon">
-                                    <img src="/images/img-lupa2.png" alt="boton de busqueda">
-                                </a>
+                    <img src="images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="300"></a>
+                <!-- Hipervinculos para el menu -->
+                <div class="navbar-links">
+                    <ul class="navbar-list">
+                        <li class="nav-item"><a href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a href="index.html">Quiénes somos</a></li>
+                        <li class="nav-item"><a href="index.html">Planes online</a></li>
+                        <li class="nav-item"><a href="formulario-contacto.html">Contacto</a></li>
+                    </ul>
+                    <!-- Buscador -->
+                    <div class="navbar-search">
+                        <input type="text" placeholder="Buscar" required>
+                        <div class="search-icon">
+                            <a href="#" class="boton-search-icon">
+                                <img src="images/img-lupa2.png" alt="boton de busqueda">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Carrito de compras -->
+                    <div class="container-navbar-carrito">
+                        <div class="navbar-carrito-icon">
+                            <button class="boton-carrito-icon">
+                                <img src="images/img-carritocompra.png" alt="carrito de compras" height="25">
+                            </button>
+
+                            <div class="cantidad-productos">
+                                <span id="contador-productos">0</span>
                             </div>
                         </div>
-                        <!-- Carrito de compras -->
-                        <div class="container-navbar-carrito">
-                            <div class="navbar-carrito-icon">
-                                <button class="boton-carrito-icon">
-                                    <img src="/images/img-carritocompra.png" alt="carrito de compras" height="25">
-                                </button>
-
-                                <div class="cantidad-productos">
-                                    <span id="contador-productos">0</span>
-                                </div>
-                            </div>
-                            <div class="container-carrito-productos hidden-cart">
-                                <div class="carga-producto hidden">
-                                    <div class="carrito-producto">
-                                        <div class="info-carrito-producto">
-                                            <span class="cantidad-producto-carrito"></span>
-                                            <p class="titulo-producto-carrito"></p>
-                                            <span class="precio-producto-carrito"></span>
-                                        </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="icono-cancela-compra">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
+                        <div class="container-carrito-productos hidden-cart">
+                            <div class="carga-producto hidden">
+                                <div class="carrito-producto">
+                                    <div class="info-carrito-producto">
+                                        <span class="cantidad-producto-carrito"></span>
+                                        <p class="titulo-producto-carrito"></p>
+                                        <span class="precio-producto-carrito"></span>
                                     </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="icono-cancela-compra">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
                                 </div>
-
-                                <div class="total-carrito hidden">
-                                    <h3>Total:</h3>
-                                    <span class="total-pagar"></span>
-                                    <button class="comprar-carrito">Comprar carrito</button>
-                                </div>
-                                <p class="carrito-vacio">El carrito está vacío</p>
                             </div>
+
+                            <div class="total-carrito hidden">
+                                <h3>Total:</h3>
+                                <span class="total-pagar"></span>
+                                <button class="comprar-carrito">Comprar carrito</button>
+                            </div>
+                            <p class="carrito-vacio">El carrito está vacío</p>
                         </div>
                     </div>
-                    <button class="navbar-toogle-boton">
-                        <img src="/images/img-trespuntos.png" alt="boton de menu" height="20">
-                    </button>
-                    <div class="navbar-menu-movil">
-                        <ul class="navbar-list-movil">
-                            <li class="nav-item-movil"><a href="#">Inicio</a></li>
-                            <li class="nav-item-movil"><a href="#">Quienes somos</a></li>
-                            <li class="nav-item-movil"><a href="#">Planes online</a></li>
-                            <li class="nav-item-movil"><a href="#">Contacto</a></li>
-                        </ul>
-                    </div>
+                </div>
+                <button class="navbar-toogle-boton">
+                    <img src="images/img-trespuntos.png" alt="boton de menu" height="20">
+                </button>
+                <div class="navbar-menu-movil">
+                    <ul class="navbar-list-movil">
+                        <li class="nav-item-movil"><a href="index.html">Inicio</a></li>
+                        <li class="nav-item-movil"><a href="index.html">Quiénes somos</a></li>
+                        <li class="nav-item-movil"><a href="index.html">Planes online</a></li>
+                        <li class="nav-item-movil"><a href="formulario-contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
             </nav>
         </section>
     </header>
@@ -101,14 +100,11 @@
         <!-- Descripcion del plan -->
         <section id="planes">
             <div id="planes-online" class="planes-seccion">
-                <!-- <div class="planes-seccion-container">
-                </div> -->
                 <div class="planes-seccion-compra">
                     <div class="planes-seccion-compra-container">
-                        <!-- <div class="planes-seccion-container compra-planes"> -->
                         <div class="planes-seccion-compra-item">
                             <figure>
-                                <img src="/images/foto-6.jpg" alt="foto plan platino" height="200">
+                                <img src="images/foto-6.jpg" alt="foto plan platino" height="200">
                             </figure>
                             <div class="planes-seccion-compra-info">
                                 <h2 class="planes-seccion-subtitulo">Plan Platino</h2>
@@ -138,12 +134,17 @@
                                         <option value="" class="estilo-opcion">Mercado Pago</option>
                                     </select>
                                 </div>
-                                <!-- Aca despues se agrega un cuadradito con form para opciones de pago (tipo transferencia, tarjeta, paypal, etc)-->
                                 <p class="precio"><strong>$50000</strong></p>
                                 <button class="boton-comprar-planes">LO QUIERO</button>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="formulario-contacto no-afectar-css">
+            <div class="container-formulario-contacto" id="no-afectar-css">
+                <div id="contacto-form" class="no-afectar-css"> <!-- aqui-->
                 </div>
             </div>
         </section>
@@ -154,7 +155,7 @@
         <section id="contacto" class="footer-nav-info">
             <div class="footer-nav-info container">
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Inicio</h3>
+                    <h3 class="footer-titulo"><a href="index.html">Inicio</a></h3>
                     <ul class="footer-info-lista-items">
                         <li class="footer-info-items-li">
                             <a href="#" class="footer-items-link" data-modal-class="modal1">¿Quieres trabajar con
@@ -178,7 +179,7 @@
                     <div class="modal modal1">
                         <div class="modal-contenido">
                             <h2>Trabaja con nosotros</h2>
-                            <iframe src="/txt/work.html"></iframe>
+                            <iframe src="txt/work.html"></iframe>
                             <button class="cerrar-modal" data-modal-class="modal1">Cerrar</button>
                         </div>
                     </div>
@@ -186,7 +187,7 @@
                     <div class="modal modal2">
                         <div class="modal-contenido">
                             <h2>FAQ - Preguntas frecuentes</h2>
-                            <iframe src="/txt/faq.html"></iframe>
+                            <iframe src="txt/faq.html"></iframe>
                             <button class="cerrar-modal" data-modal-class="modal2">Cerrar</button>
                         </div>
                     </div>
@@ -194,7 +195,7 @@
                     <div class="modal modal3">
                         <div class="modal-contenido">
                             <h2>Politica de privacidad - Fitness 360</h2>
-                            <iframe src="/txt/politica.html"></iframe>
+                            <iframe src="txt/politica.html"></iframe>
                             <button class="cerrar-modal" data-modal-class="modal3">Cerrar</button>
                         </div>
                     </div>
@@ -202,7 +203,7 @@
                     <div class="modal modal4">
                         <div class="modal-contenido">
                             <h2>Terminos y condiciones - Fitness 360</h2>
-                            <iframe src="/txt/terminos.html"></iframe>
+                            <iframe src="txt/terminos.html"></iframe>
                             <button class="cerrar-modal" data-modal-class="modal4">Cerrar</button>
                         </div>
                     </div>
@@ -210,7 +211,7 @@
                     <div class="modal modal5">
                         <div class="modal-contenido">
                             <h2>Aviso legal - Fitness 360</h2>
-                            <iframe src="/txt/aviso.html"></iframe>
+                            <iframe src="txt/aviso.html"></iframe>
                             <button class="cerrar-modal" data-modal-class="modal5">Cerrar</button>
                         </div>
                     </div>
@@ -219,16 +220,16 @@
 
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Quienes somos</h3>
+                    <h3 class="footer-titulo"><a href="index.html">Quiénes somos</a></h3>
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Planes online</h3>
+                    <h3 class="footer-titulo"><a href="index.html">Planes online</a></h3>
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Testimonios</h3>
+                    <h3 class="footer-titulo"><a href="index.html">Testimonios</a></h3>
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo">Contacto</h3>
+                    <h3 class="footer-titulo"><a href="formulario-contacto.html">Contacto</a></h3>
                 </article>
 
                 <article class="footer-info-lista">
@@ -264,7 +265,7 @@
         </section>
     </footer>
 
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

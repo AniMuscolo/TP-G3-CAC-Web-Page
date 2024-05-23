@@ -4,30 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/logo4-pag.png" type="image/x-icon">
-    <!-- Estilos -->
-    <link rel="stylesheet" href="style.css">
+    <!-- favicon -->
+
+    <link rel="shortcut icon" href="images/logo-contacto.png" type="image/x-icon">
+    <!-- estilos -->
     <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="stylesheet" href="modal.css"> -->
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <title>Descripcion Plan Bronce</title>
+    <title>Contacto</title>
 </head>
 
 <body>
     <!-- Encabezado -->
     <header class="header">
         <section class="header-info">
-            <p>El mejor momento para cambiar tu vida es ahora. Empieza a crear tus nuevos hábitos HOY mismo! Anímate y
-                contáctanos!</p>
+            <p>El mejor momento para cambiar tu vida es ahora. ¡Empieza a crear tus nuevos hábitos HOY mismo! Animate y
+                contactanos!
+            </p>
         </section>
         <section class="navbar-container">
             <nav class="navbar contenedor">
                 <!-- logo -->
                 <a href="index.html" class="navbar-logo">
-                    <img src="images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="300"></a>
+                    <img src="images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="300">
+                </a>
                 <!-- Hipervinculos para el menu -->
                 <div class="navbar-links">
                     <ul class="navbar-list">
@@ -38,7 +44,7 @@
                     </ul>
                     <!-- Buscador -->
                     <div class="navbar-search">
-                        <input type="text" placeholder="Buscar" required>
+                        <input type="text" placeholder="Buscar">
                         <div class="search-icon">
                             <a href="#" class="boton-search-icon">
                                 <img src="images/img-lupa2.png" alt="boton de busqueda">
@@ -86,74 +92,91 @@
                 <div class="navbar-menu-movil">
                     <ul class="navbar-list-movil">
                         <li class="nav-item-movil"><a href="index.html">Inicio</a></li>
-                        <li class="nav-item-movil"><a href="index.html">Quiénes somos</a></li>
-                        <li class="nav-item-movil"><a href="index.html">Planes online</a></li>
-                        <li class="nav-item-movil"><a href="formulario-contacto.html">Contacto</a></li>
+                        <li class="nav-item-movil"><a href="#quienes-somos">Quiénes somos</a></li>
+                        <li class="nav-item-movil"><a href="#planes-online">Planes online</a></li>
+                        <li class="nav-item-movil"><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
         </section>
     </header>
 
-    <!-- Contenido -->
+    <!-- Formulario de contacto -->
     <main>
-        <!-- Descripcion del plan -->
         <section id="planes">
             <div id="planes-online" class="planes-seccion">
-                <div class="planes-seccion-compra">
-                    <div class="planes-seccion-compra-container">
-                        <div class="planes-seccion-compra-item">
-                            <figure>
-                                <img src="images/foto-31.jpg" alt="foto plan bronce" height="200">
-                            </figure>
-                            <div class="planes-seccion-compra-info">
-                                <h2 class="planes-seccion-subtitulo">Plan Bronce</h2>
-                                <p class="plan-seccion-compra-descripcion">
-                                <ul>
-                                    <li>Programa de 4 semanas</li>
-                                    <li>Rutina de Entrenamiento personalizada y dinámica</li>
-                                    <li>Adaptada a tus necesidades y nivel de entrenamiento</li>
-                                    <li>Opción para hacer en casa o gimnasio</li>
-                                    <li>Guía de ejercicios por PDF</li>
-                                </ul>
-                                </p>
-                                <p class="planes-formato-pago">Opciones de pago:</p>
-                                <div class="contenedor-formulario">
-                                    <select name="opciondepago" id="opciondepago" class="seleccion-formulario">
-                                        <option value="" class="estilo-opcion">Selecciona una opción: </option>
-                                        <option value="" class="estilo-opcion">Tarjeta de crédito/débito</option>
-                                        <option value="" class="estilo-opcion">Transferencia/depósito</option>
-                                        <option value="" class="estilo-opcion">PayPal</option>
-                                        <option value="" class="estilo-opcion">Mercado Pago</option>
-                                    </select>
-                                </div>
-                                <p class="precio"><strong>$20000</strong></p>
-                                <button class="boton-comprar-planes">LO QUIERO</button>
-                            </div>
-                        </div>
+                <div class="planes-seccion-compra" id="no-afectar-css">
+                    <div class="planes-seccion-compra-container" id="no-afectar-css">
+                        <!-- Seccion agregada para la funcionalidad de modals en index - 
+                            se agrega etiqueta no-afectar-css para evitar espacio en blanco -->
                     </div>
                 </div>
             </div>
         </section>
-        <section class="formulario-contacto no-afectar-css">
-            <div class="container-formulario-contacto" id="no-afectar-css">
-                <div id="contacto-form" class="no-afectar-css"> <!-- aqui-->
-                </div>
+        <section class="formulario-contacto">
+            <div class="container-formulario-contacto">
+                <div class="title">Contacto</div>
+                <form id="contacto-form" method="post">
+                    <div class="form-group">
+                        <span>Nombre</span>
+                        <input id="nombre" name="nombre" type="text" placeholder="Escriba aquí su nombre">
+                        <small id="snombre">Por favor, ingrese su nombre</small>
+                    </div>
+                    <div class="form-group">
+                        <span>Apellido</span>
+                        <input id="apellido" name="apellido" type="text" placeholder="Ingrese su apellido">
+                        <small id="sapellido">Por favor, ingrese su apellido</small>
+                    </div>
+                    <div class="form-group">
+                        <span>Edad</span>
+                        <input id="edad" name="edad" type="number" placeholder="Ingrese su edad">
+                        <small id="sedad">Por favor, ingrese su edad</small>
+                    </div>
+
+                    <div class="form-group">
+                        <span>Email</span>
+                        <input id="email" name="email" type="email" placeholder="Escriba aquí su email">
+                        <small id="semail">Por favor, ingrese su email</small>
+                    </div>
+
+                    <div class="form-group">
+                        <span>Teléfono</span>
+                        <input id="telefono" name="telefono" type="number" placeholder="Número de teléfono">
+                        <small id="stelefono">Por favor, ingrese su teléfono</small>
+                    </div>
+
+                    <div class="form-group">
+                        <span>Teléfono 2</span>
+                        <input id="telefono2" name="telefono2" type="number" placeholder="Teléfono alternativo">
+                    </div>
+
+                    <div class="campo">
+                        <label>Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe lo que quieras comentar"></textarea>
+                        <small id="smensaje">Por favor, ingrese sus comentarios en menos de 200 caracteres</small>
+                    </div>
+
+                    <div class="button">
+                        <input type="submit" value="Solicitar contacto">
+                        <p id="error" class="error"></p>
+                    </div>
+                </form>
             </div>
         </section>
+        
     </main>
+
 
     <!-- Footer, contacto y redes -->
     <footer class="footer">
         <section id="contacto" class="footer-nav-info">
             <div class="footer-nav-info container">
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo"><a href="index.html">Inicio</a></h3>
+                    <h3 class="footer-titulo"> <a href="index.html">Inicio</a></h3>
                     <ul class="footer-info-lista-items">
                         <li class="footer-info-items-li">
                             <a href="#" class="footer-items-link" data-modal-class="modal1">¿Quieres trabajar con
-                                nosotros?
-                            </a>
+                                nosotros?</a>
                         </li>
                         <li class="footer-info-items-li">
                             <a href="#" class="footer-items-link" data-modal-class="modal2">FAQ</a>
@@ -209,12 +232,12 @@
                             <button class="cerrar-modal" data-modal-class="modal5">Cerrar</button>
                         </div>
                     </div>
-                    <!-------- Fin Modals ------------->
+                    <!------ Fin Modals ------>
 
 
                 </article>
                 <article class="footer-info-lista">
-                    <h3 class="footer-titulo"><a href="index.html">Quiénes somos</a></h3>
+                    <h3 class="footer-titulo"><a href="index.html">Quienes somos</a></h3>
                 </article>
                 <article class="footer-info-lista">
                     <h3 class="footer-titulo"><a href="index.html">Planes online</a></h3>
@@ -244,7 +267,7 @@
                     </div>
 
                     <div class="suscribete-contenedor">
-                        <h3 class="footer-titulo">Suscribete al Newsletter</h3>
+                        <h3 class="footer-titulo">Suscríbete al Newsletter</h3>
                         <form action="" class="suscribete-contenedor-form">
                             <input type="email" class="suscribete-contenedor-mail input" placeholder="Ingresa tu mail">
                             <button type="submit" class="boton-suscribete button">Suscribirme</button>
@@ -255,11 +278,74 @@
         </section>
         <section class="footer-copyright">
             <p class="footer-copyright-texto" id="copyright">Copyright © 2024 Fitness 360 - Todos los derechos
-                reservados</p>
+                reservados
+            </p>
         </section>
     </footer>
-
     <script src="app.js"></script>
+
 </body>
 
 </html>
+
+<!-- const contacto=document.getElementById("contacto");
+const nombre=document.getElementById("nombre");
+const snombre=document.getElementById("snombre");
+const apellido=document.getElementById("apellido");
+const sapellido=document.getElementById("sapellido");
+const edad=document.getElementById("edad");
+const sedad=document.getElementById("sedad");
+const email=document.getElementById("email");
+const semail=document.getElementById("semail");
+const telefono=document.getElementById("telefono");
+const stelefono=document.getElementById("stelefono");
+const mensaje=document.getElementById("mensaje");
+const smensaje=document.getElementById("smensaje");
+const parrafo=document.getElementById("error");
+contacto.addEventListener("submit",e=>{
+e.preventDefault();
+e.stopPropagation();
+     let valor1=false; 
+     let valor2=false;
+      let valor3=false;
+      let valor4=false;
+      let valor5=false;
+      let valor6=false;
+      parrafo.innerHTML="";
+      let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      let phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+      if(nombre.value.length<3||typeof nombre.value!=="string"){
+          valor1=true;
+          snombre.classList.add("invalido");
+     }
+      if(apellido.value.length<3||typeof apellido.value!=="string"){
+          valor2=true;
+          sapellido.classList.add("invalido");
+      }
+      if(edad.value<18||edad.value>110){
+          valor3=true;
+          sedad.classList.add("invalido");
+      }
+        
+      if(!regexEmail.test(email.value)){
+          valor4=true;
+          semail.classList.add("invalido");
+      }
+
+      if(!telefono.value.match(phoneno)){
+         valor5=true;
+          stelefono.classList.add("invalido");
+      }
+      if(mensaje.value.trim().length>600){
+          valor5=true;
+          smensaje.classList.add("invalido");
+      }
+    
+      if(valor1||valor2||valor3||valor4||valor5||valor6){
+          parrafo.innerHTML="Hay algún error";
+      }else{
+          parrafo.innerHTML="Enviado";
+          contacto.reset();
+      }
+      }) -->

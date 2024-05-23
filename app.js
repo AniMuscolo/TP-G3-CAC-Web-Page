@@ -62,6 +62,61 @@ document.addEventListener("DOMContentLoaded", () => {
     let autoDesplazamientoIntervalo = setInterval(autoDesplazamiento, 4000)  // intervalo de tiempo que dura la foto a la vista
 });
 
+/*Barra de progreso del carrusel*/
+document.addEventListener("DOMContentLoaded", () => {
+    const fotosCarrousel = document.querySelectorAll(".carrousel-seccion-slide");
+    const botonPrevio = document.querySelector(".carrousel-control-previa");
+    const botonProximo = document.querySelector(".carrousel-control-proximo");
+    const barraProgreso = document.querySelector(".barra-progreso");
+
+    let fotoActualIndice = 0;
+    let autoDesplazamientoIntervalo;
+
+    const mostrarFoto = (index) => {
+        fotosCarrousel.forEach(fotos => fotos.classList.remove("contenido"));
+        fotosCarrousel[index].classList.add("contenido");
+        actualizarBarraProgreso(index);
+    }
+
+    const cambiarFoto = (increment) => {
+        fotoActualIndice = (fotoActualIndice + increment + fotosCarrousel.length) % fotosCarrousel.length;
+        mostrarFoto(fotoActualIndice);
+    }
+
+    const autoDesplazamiento = () => {
+        cambiarFoto(1);
+    }
+
+    const iniciarAutoDesplazamiento = () => {
+        autoDesplazamientoIntervalo = setInterval(autoDesplazamiento, 4000);
+    }
+
+    const detenerAutoDesplazamiento = () => {
+        clearInterval(autoDesplazamientoIntervalo);
+    }
+
+    const actualizarBarraProgreso = (index) => {
+        const progreso = ((index + 1) / fotosCarrousel.length) * 100;
+        barraProgreso.style.width = `${progreso}%`;
+    }
+
+    botonProximo.addEventListener("click", (event) => {
+        event.preventDefault();
+        detenerAutoDesplazamiento();
+        cambiarFoto(1);
+        iniciarAutoDesplazamiento();
+    })
+
+    botonPrevio.addEventListener("click", (event) => {
+        event.preventDefault();
+        detenerAutoDesplazamiento();
+        cambiarFoto(-1);
+        iniciarAutoDesplazamiento();
+    })
+
+    iniciarAutoDesplazamiento();
+});
+
 /* Funcionalidad Slide Testimonios */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -115,10 +170,6 @@ const agregarProducto = document.querySelector(".carga-producto");
 const botonCancelar = document.querySelector(".icono-cancela-compra");
 
 const listaPlanes = document.querySelector(".planes-seccion-compra-container"); //lista de todos los containers de planes
-
-/* Prueba por error en modals */
-//const listaPlanes = document.querySelector(".compra-planes"); 
-// const listaPlanes = document.querySelector(".planes-seccion-container");
 
 let productosTotales = []; // variable con array que incluye el total de productos que se agreguen al carrito
 
@@ -228,37 +279,109 @@ const mostrarCarrito = () => {    // para crear el carrito y que todos esos prod
     contarProductos.innerText = totalDePlanesAgregados;
 };
 
+// validacion del formulario de contacto
+
+const contacto=document.getElementById("contacto-form");
+const nombre=document.getElementById("nombre");
+const snombre=document.getElementById("snombre");
+const apellido=document.getElementById("apellido");
+const sapellido=document.getElementById("sapellido");
+const edad=document.getElementById("edad");
+const sedad=document.getElementById("sedad");
+const email=document.getElementById("email");
+const semail=document.getElementById("semail");
+const telefono=document.getElementById("telefono");
+const stelefono=document.getElementById("stelefono");
+const mensaje=document.getElementById("mensaje");
+const smensaje=document.getElementById("smensaje");
+const parrafo=document.getElementById("error");
+contacto.addEventListener("submit",e=>{
+e.preventDefault();
+    let valor1=false;
+    let valor2=false;
+    let valor3=false;
+    let valor4=false;
+    let valor5=false;
+    let valor6=false;
+    parrafo.innerHTML="";
+    let regexEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+    if(nombre.value.length<3||typeof nombre.value!=="string"){
+    
+        valor1=true;
+        snombre.classList.add("invalido");
+    }
+    if(apellido.value.length<3||typeof apellido.value!=="string"){
+   
+        valor2=true;
+        sapellido.classList.add("invalido");
+    }
+    if(edad.value<18||edad.value>110){
+       
+        valor3=true;
+        sedad.classList.add("invalido");
+    }
+        
+    if(!regexEmail.test(email.value)){
+      
+        valor4=true;
+        semail.classList.add("invalido");
+    }
+
+    if(!telefono.value.match(phoneno)){
+        
+        valor5=true;
+        stelefono.classList.add("invalido");
+    }
+    if(mensaje.value.trim().length>600){
+       
+        valor5=true;
+        smensaje.classList.add("invalido");
+    }
+    
+    if(valor1||valor2||valor3||valor4||valor5||valor6){
+        parrafo.innerHTML="Hay algún error";
+    }else{
+        parrafo.innerHTML="Enviado";
+        contacto.reset();
+    }
+})
+
 //-------------------------------------------------
 // Uso de modals
-const modales = document.querySelectorAll(".modal");
-const botonesCerrar = document.querySelectorAll(".cerrar-modal");
-const enlaces = document.querySelectorAll(".footer-items-link");
+// Selector para los enlaces que abren los modals
+const enlaces = document.querySelectorAll('.footer-items-link');
 
+// Función para abrir el modal correspondiente al enlace clickeado
 function abrirModal(enlace) {
     const modalClass = enlace.dataset.modalClass;
     const modal = document.querySelector(`.modal.${modalClass}`);
-    modal.classList.add("modal-activo");
+    modal.classList.add('modal-activo');
 }
 
+// Función para cerrar el modal correspondiente al botón clickeado
 function cerrarModal(boton) {
     const modalClass = boton.dataset.modalClass;
     const modal = document.querySelector(`.modal.${modalClass}`);
-    modal.classList.remove("modal-activo");
+    modal.classList.remove('modal-activo');
 }
 
+// Event listeners para los enlaces que abren los modals
 enlaces.forEach(enlace => {
-    enlace.addEventListener("click", (e) => {
+    enlace.addEventListener('click', (e) => {
         e.preventDefault();
         abrirModal(enlace);
     });
 });
 
+// Event listeners para los botones que cierran los modals
+const botonesCerrar = document.querySelectorAll('.cerrar-modal');
 botonesCerrar.forEach(boton => {
-    boton.addEventListener("click", () => {
+    boton.addEventListener('click', () => {
         cerrarModal(boton);
     });
 });
 
-
-
+//---------------------------------------------------
 
