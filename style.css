@@ -20,17 +20,12 @@
 }
 
 body {
-    margin: auto;
     background-color: var(--bg-color);
     font-family: "Open Sans", sans-serif;
 }
 
 /* Esto evitara que el css afecte a los div denominados con esta clase*/
 #no-afectar-css{
-    all: initial; 
-}
-
-#no-afectar{
     all: initial; 
 }
 
@@ -445,11 +440,12 @@ small{
 
 .container-formulario-contacto{
     max-width: 700px;
-    width: 90%;
+    width:100%;
     padding: 30px 30px;
     background-color: #fff;
     border-radius: 5px;
     margin-top: 150px;
+    margin-left: 150px;
     margin-bottom: 200px;
 } 
 
@@ -616,6 +612,7 @@ form .button input:hover{
     font-style: italic;
     line-height: 3.4em;
     white-space: pre-line;
+    color: var(--fourth-color);
 }
 
 .qs-empezamos{
@@ -625,6 +622,7 @@ form .button input:hover{
     font-style: italic;
     line-height:3.4em;
     white-space: pre-line;
+    color: var(--fourth-color);
 }
 
 /*Estilo slide fotos*/
@@ -791,10 +789,6 @@ form .button input:hover{
     margin-top: 80px;
     margin-left:auto;
     margin-right:auto;
-}
-
-#planes-online{
-    margin: auto;
 }
 
 .planes-seccion-container {   
@@ -1530,16 +1524,37 @@ input {
     flex-direction: column;
 }
 
-.suscribete-contenedor-form input {
+.suscribete-contenedor{
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;    
+}
+
+
+.suscribete-contenedor-form input{
     border: none;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: rgb(239, 233, 243);
     padding: 12px;
     outline: none;
     color: var(--fourth-color);
     border-radius: 10px;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
 }
+
+/* .suscribete-contenedor-comentario {
+    border: none;
+    font-size: 0.9em;
+    font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(239, 233, 243);
+    padding: 12px;
+    outline: none;
+    color: var(--fourth-color);
+    border-radius: 10px;
+    margin-bottom: 0.8em;
+    resize:none;
+} */
 
 .boton-suscribete {
     font-size: 1em;
@@ -1550,6 +1565,8 @@ input {
     background-color: var(--bg-color);
     border-radius: 10px;
     text-align: center;
+    margin-top: 15px;
+    margin-left: 55px;
     width: 150px;
 }
 
