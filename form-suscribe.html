@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo4-pag.png" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="crud-suscripciones.css">
+    <!-- <link rel="stylesheet" href="modal.css"> -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Fitness 360 - Planes de Entrenamiento Online</title>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <section class="header-info">
+            <p>El mejor momento para cambiar tu vida es ahora. ¡Empieza a crear tus nuevos hábitos HOY mismo! Animate y
+                contactanos!
+            </p>
+        </section>
+        <section class="navbar-container">
+            <nav class="navbar contenedor">
+                <!-- logo -->
+                <a href="index.html" class="navbar-logo">
+                    <img src="images/logo3-titulo-pag.png" alt="Logo de Fitness 360" height="300">
+                </a>
+                <!-- Hipervinculos para el menu -->
+                <div class="navbar-links">
+                    <ul class="navbar-list">
+                        <li class="nav-item"><a href="index.html"> Inicio</a></li>
+                        <li class="nav-item"><a href="#quienes-somos"> Quiénes somos</a></li>
+                        <li class="nav-item"><a href="#planes-online">Planes online</a></li>
+                        <li class="nav-item"><a href="formulario-contacto.html">Contacto</a></li>
+                    </ul>
+                    <!-- Buscador -->
+                    <div class="navbar-search">
+                        <input type="text" placeholder="Buscar">
+                        <div class="search-icon">
+                            <a href="#" class="boton-search-icon">
+                                <img src="images/img-lupa2.png" alt="boton de busqueda">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Carrito de compras -->
+                    <div class="container-navbar-carrito">
+                        <div class="navbar-carrito-icon">
+                            <button class="boton-carrito-icon">
+                                <img src="images/img-carritocompra.png" alt="carrito de compras" height="25">
+                            </button>
+
+                            <div class="cantidad-productos">
+                                <span id="contador-productos">0</span>
+                            </div>
+                        </div>
+                        <div class="container-carrito-productos hidden-cart">
+                            <div class="carga-producto hidden">
+                                <div class="carrito-producto">
+                                    <div class="info-carrito-producto">
+                                        <span class="cantidad-producto-carrito"></span>
+                                        <p class="titulo-producto-carrito"></p>
+                                        <span class="precio-producto-carrito"></span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="icono-cancela-compra">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="total-carrito hidden">
+                                <h3>Total:</h3>
+                                <span class="total-pagar"></span>
+                                <button class="comprar-carrito">Comprar carrito</button>
+                            </div>
+                            <p class="carrito-vacio">El carrito está vacío</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="navbar-toogle-boton">
+                    <img src="images/img-trespuntos.png" alt="boton de menu" height="20">
+                </button>
+                <div class="navbar-menu-movil">
+                    <ul class="navbar-list-movil">
+                        <li class="nav-item-movil"><a href="index.html">Inicio</a></li>
+                        <li class="nav-item-movil"><a href="#quienes-somos">Quiénes somos</a></li>
+                        <li class="nav-item-movil"><a href="#planes-online">Planes online</a></li>
+                        <li class="nav-item-movil"><a href="formulario-contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <section id="form" class="container">
+        <h2 class="search-title">Suscríbete</h2>
+        <form action="#" id="form-suscripcion">
+            <div class="d-flex">
+                <div class="form-control d-flex-column">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="input-search" name="nombre" id="nombre">
+                </div>
+                <div class="form-control d-flex-column">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="input-search" name="edad" id="edad">
+                </div>
+                <div class="form-control d-flex-column">
+                    <label for="mail">Mail</label>
+                    <input type="mail" class="input-search" name="mail" id="mail">
+                </div>
+                <div class="form-control d-flex-column">
+                    <label for="telefono">Telefono</label>
+                    <input type="number" class="input-search" name="telefono" id="telefono">
+                </div>
+                <input type="hidden" name="id" id="id-suscripcion">
+                <button class="btn-susc" type="button" id="btn-save-suscripcion">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer, contacto y redes -->
+    <footer class="footer">
+        <section id="contacto" class="footer-nav-info">
+            <div class="footer-nav-info container">
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo"> <a href="index.html">Inicio</a></h3>
+                    <ul class="footer-info-lista-items">
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link" data-modal-class="modal1">¿Quieres trabajar con
+                                nosotros?</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link" data-modal-class="modal2">FAQ</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link" data-modal-class="modal3">Política de privacidad</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link" data-modal-class="modal4">Términos y condiciones</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="#" class="footer-items-link" data-modal-class="modal5">Aviso Legal</a>
+                        </li>
+                        <li class="footer-info-items-li">
+                            <a href="crud-suscripciones.html">CRUD Subs</a>
+                        </li>
+                    </ul>
+
+                    <!------------ Contenido de modals ------------>
+                    <!-- <div class="modal modal1">
+                        <div class="modal-contenido">
+                            <h2>Trabaja con nosotros</h2>
+                            <iframe src="txt/work.html"></iframe>
+                            <button class="cerrar-modal" data-modal-class="modal1">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <div class="modal modal2">
+                        <div class="modal-contenido">
+                            <h2>FAQ - Preguntas frecuentes</h2>
+                            <iframe src="txt/faq.html"></iframe>
+                            <button class="cerrar-modal" data-modal-class="modal2">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <div class="modal modal3">
+                        <div class="modal-contenido">
+                            <h2>Politica de privacidad - Fitness 360</h2>
+                            <iframe src="txt/politica.html"></iframe>
+                            <button class="cerrar-modal" data-modal-class="modal3">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <div class="modal modal4">
+                        <div class="modal-contenido">
+                            <h2>Terminos y condiciones - Fitness 360</h2>
+                            <iframe src="txt/terminos.html"></iframe>
+                            <button class="cerrar-modal" data-modal-class="modal4">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <div class="modal modal5">
+                        <div class="modal-contenido">
+                            <h2>Aviso legal - Fitness 360</h2>
+                            <iframe src="txt/aviso.html"></iframe>
+                            <button class="cerrar-modal" data-modal-class="modal5">Cerrar</button>
+                        </div>
+                    </div> -->
+                    <!------ Fin Modals ------>
+                </article>
+
+                <article class="footer-info-lista">
+                    <div class="suscribete-contenedor">
+                        <h3 class="footer-titulo"> <a href="form-suscribe.html">Suscríbete</a></h3>
+                        <!-- <form action="" class="suscribete-contenedor-form">
+                            <input id="nombre" type="text" class="suscribete-contenedor-nombre input" placeholder="Ingrese su nombre">
+                            <input id="edad" class="suscribete-contenedor-edad input" type="number" placeholder="Ingrese su edad">
+                            <input id="mail" type="email" class="suscribete-contenedor-mail input" placeholder="Ingrese su mail">
+                            <input id="telefono" class="suscribete-contenedor-telefono input" type="number" placeholder="Ingrese su teléfono">
+                            <button type="submit" class="boton-suscribete button">Enviar</button>
+                        </form> -->
+                    </div>
+                </article>
+
+                <article class="footer-info-lista">
+                    <h3 class="footer-titulo">Síguenos</h3>
+                    <div class="footer-iconos-contenedor">
+                        <a href="javascript:void(0)" class="icono-redsocial">
+                            <img src="images/icono-facebook.png" alt="icono de facebook">
+                        </a>
+                        <a href="javascript:void(0)" class="icono-redsocial">
+                            <img src="images/icono-instagram2.png" alt="icono de instagram">
+                        </a>
+                        <a href="javascript:void(0)" class="icono-redsocial">
+                            <img src="images/icono-twitter.png" alt="icono de X-Twitter" height="16">
+                        </a>
+                        <a href="javascript:void(0)" class="icono-redsocial">
+                            <img src="images/icono-youtube.png" alt="icono de youtube">
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="footer-copyright">
+            <p class="footer-copyright-texto" id="copyright">Copyright © 2024 Fitness 360 - Todos los derechos
+                reservados
+            </p>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="crud-suscripciones-fetch.js"></script>
+        <script src="app.js"></script>
+    </footer>
+</body>

@@ -8,10 +8,10 @@
 
     <link rel="shortcut icon" href="images/logo-contacto.png" type="image/x-icon">
     <!-- estilos -->
-    <link rel="stylesheet" href="modal.css">
-    <link rel="stylesheet" href="style.css">
-
     <!-- <link rel="stylesheet" href="modal.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="crud-suscripciones.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,16 +103,16 @@
 
     <!-- Formulario de contacto -->
     <main>
-        <section id="planes">
+        <!-- <section id="planes">
             <div id="planes-online" class="planes-seccion">
                 <div class="planes-seccion-compra" id="no-afectar-css">
                     <div class="planes-seccion-compra-container" id="no-afectar-css">
-                        <!-- Seccion agregada para la funcionalidad de modals en index - 
-                            se agrega etiqueta no-afectar-css para evitar espacio en blanco -->
+                        Seccion agregada para la funcionalidad de modals en index - 
+                            se agrega etiqueta no-afectar-css para evitar espacio en blanco
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="formulario-contacto">
             <div class="container-formulario-contacto">
                 <div class="title">Contacto</div>
@@ -193,7 +193,7 @@
                     </ul>
 
                     <!------------ Contenido de modals ------------>
-                    <div class="modal modal1">
+                    <!-- <div class="modal modal1">
                         <div class="modal-contenido">
                             <h2>Trabaja con nosotros</h2>
                             <iframe src="txt/work.html"></iframe>
@@ -231,20 +231,20 @@
                             <iframe src="txt/aviso.html"></iframe>
                             <button class="cerrar-modal" data-modal-class="modal5">Cerrar</button>
                         </div>
-                    </div>
+                    </div> -->
                     <!------ Fin Modals ------>
                 </article>
 
                 <article class="footer-info-lista">
                     <div class="suscribete-contenedor">
-                        <h3 class="footer-titulo">Suscríbete</h3>
-                        <form action="" class="suscribete-contenedor-form">
+                        <h3 class="footer-titulo"> <a href="form-suscribe.html">Suscríbete</a></h3>
+                        <!-- <form action="" class="suscribete-contenedor-form">
                             <input type="nombre" class="suscribete-contenedor-nombre input" placeholder="Ingrese su nombre">
                             <input id="edad" class="suscribete-contenedor-edad input" type="number" placeholder="Ingrese su edad">
                             <input type="email" class="suscribete-contenedor-mail input" placeholder="Ingrese su mail">
                             <input id="telefono" class="suscribete-contenedor-telefono input" type="number" placeholder="Ingrese su teléfono">
                             <button type="submit" class="boton-suscribete button">Enviar</button>
-                        </form>
+                        </form> -->
                     </div>
                 </article>
 
@@ -273,6 +273,8 @@
             </p>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="crud-suscripciones-fetch.js"></script>
     <script src="app.js"></script>
 
 </body>
